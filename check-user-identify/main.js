@@ -3,7 +3,7 @@ import { Client, Users, Query } from "node-appwrite";
 export default async ({ req, res, log, error }) => {
   const client = new Client()
     .setEndpoint("https://cloud.appwrite.io/v1")
-    .setProject(process.env.APPWRITE_FUNCTION_PROJECT_ID)
+    .setProject(process.env.APPWRITE_PROJECT_ID)
     .setKey(process.env.APPWRITE_API_KEY);
 
   const users = new Users(client);
